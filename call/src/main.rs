@@ -2,7 +2,7 @@ use inkwell::{context::Context, module::{Linkage, Module}, passes::PassManagerSu
 
 #[link(name = "rust_lib", kind = "static")]
 extern "C" {
-    fn pow(x: f64, y: f64) -> f64;
+    // fn pow(x: f64, y: f64) -> f64;
     fn mypow(x: f64, y: f64) -> f64;
 }
 
@@ -48,11 +48,11 @@ fn main() {
             .call()
     };
 
-    let direct_result = unsafe {
-        pow(2.0, 3.0)
-    };
+    // let direct_result = unsafe {
+    //     pow(2.0, 3.0)
+    // };
 
-    println!("direct: {}", direct_result);
+    // println!("direct: {}", direct_result);
 
     let direct_result = unsafe {
         mypow(2.0, 3.0)
