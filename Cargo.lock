@@ -15,6 +15,7 @@ dependencies = [
  "cc",
  "inkwell",
  "llvm-sys 181.1.0",
+ "rust-lib",
 ]
 
 [[package]]

@@ -2,6 +2,8 @@
 name = "call"
 version = "0.1.0"
 edition = "2021"
+links = "rust_lib"
+build = "build.rs"
 
 [dependencies]
 inkwell = { version = "0.4.0", features = ["llvm17-0"] }
@@ -9,3 +11,4 @@ llvm-sys = "181.1.0"
 
 [build-dependencies]
 cc = "1.0.102"
+rust-lib = { path = "../rust-lib" }
